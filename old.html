@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кликер</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Кликер</h1>
+            <div class="theme-switcher">
+                <label for="theme-toggle">Тема:</label>
+                <input type="range" id="theme-toggle" min="0" max="1" step="1" value="0">
+                <span id="theme-label">Светлая</span>
+            </div>
+            <div class="score">
+                <h2>Ваш счёт: <span id="score">0</span></h2>
+            </div>
+            <div class="coin" id="coin">
+                <img src="images/coin.png" alt="Монета" class="coin-background">
+                <img src="images/elephant.png" alt="Слон" class="coin-icon">
+                <div id="click-animation" class="click-animation"></div>
+            </div>
+            <div class="controls">
+                <button id="reset-button">Сбросить счёт</button>
+            </div>
+        </header>
+        <footer>
+            <div class="menu">
+                <a href="index.html" class="menu-item">
+                    <div class="menu-icon-container">
+                        <img src="images/shop.png" alt="Платформа" class="menu-icon">
+                    </div>
+                    <span>Платформа</span>
+                </a>
+                <a href="shop.html" class="menu-item">
+                    <div class="menu-icon-container">
+                        <img src="images/shop.png" alt="Лавка" class="menu-icon">
+                    </div>
+                    <span>Лавка</span>
+                </a>
+                <a href="friends.html" class="menu-item">
+                    <div class="menu-icon-container">
+                        <img src="images/shop.png" alt="Друзья" class="menu-icon">
+                    </div>
+                    <span>Друзья</span>
+                </a>
+                <a href="tasks.html" class="menu-item">
+                    <div class="menu-icon-container">
+                        <img src="images/shop.png" alt="Задания" class="menu-icon">
+                    </div>
+                    <span>Задания</span>
+                </a>
+            </div>
+        </footer>
+    </div>
+    <div class="energy-status">
+        <img src="images/bulbs/light bulb 5.png" id="energy-icon" alt="Энергия">
+        <span id="energy">5000</span>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
