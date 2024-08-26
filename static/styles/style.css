@@ -55,7 +55,7 @@ body {
 .energy {
     display: flex;
     align-items: center;
-    background-color: #04001a;
+    background-color: #212121;
     width: 90px;
     height: 50px;
     border: 2px;

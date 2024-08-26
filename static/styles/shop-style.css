@@ -14,3 +14,88 @@
     height: 40px;
     width: 40px;
 }
+
+.items {
+    margin-top: 50px;
+    display: flex;
+    gap: 8px; /* Расстояние между карточками */
+    justify-content: center
+}
+
+/* Товар - +1000 энергии */
+.energy-update {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 90px;
+    border: 1px solid #898989;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.energy-update img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    background-color: #1b1b1c;
+    border-bottom: 1px solid #898989;
+    border-right: 1px solid #898989;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100%;
+}
+
+.item-name {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70px;
+    height: 11px;
+    font-size: 10px;
+    font-weight: bold;
+    margin: 0;
+    padding-top: 1px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #898989;
+}
+
+.item-description {
+    position: absolute;
+    width: 70px;
+    height: 43px;
+    top: 16px;
+    right: 0;
+    font-size: 8px;
+    margin: 0;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #898989;
+}
+
+.item-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-lvl {
+    text-align: center;
+    justify-self: auto;
+    width: 80px;
+    height: 30px;
+    font-size: 12px;
+    border-right: 1px solid #898989;
+}
+
+.item-price {
+    font-weight: bold;
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    font-size: 14px;
+}
