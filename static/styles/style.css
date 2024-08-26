@@ -14,14 +14,13 @@ body {
 .main-container {
     text-align: center;
     height: 100%;
-    background-color: #04001b;
+    background-color: #131313;
     color: #f1f1f1;
     padding: 15px;
     display: flex;
     flex-direction: column;
-    border: 2px;
     border-radius: 10px;
-    box-shadow: 0 0 15px #6c6c6c99;
+    box-shadow: 0 0 15px #85858590;
     justify-content: space-between;
     position: relative;
 }
@@ -54,13 +53,13 @@ body {
 /* Энергия */
 .energy {
     display: flex;
+    margin-top: 0;
     align-items: center;
-    background-color: #212121;
+    background-color: #343434;
     width: 90px;
-    height: 50px;
-    border: 2px;
+    height: 45px;
     border-radius: 10px;
-    box-shadow: 0 0 5px #81818181;
+    box-shadow: 1px 1px 0 #5a5a5ac2;
 }
 
 .energy img {
@@ -101,10 +100,10 @@ body {
 
 /* Кнопка настроек */
 .settings {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     position: absolute;
-    margin: 70%;
+    margin: 80%;
     background-image: url('../images/setting-icon.png');
     background-size: cover;
 }
@@ -112,14 +111,14 @@ body {
 /* Полоса уровня и название */
 .profile-level {
     margin-top: 2px;
-    width: 130px;
+    width: 150px;
     text-align: center;
 }
 
 /* Контейнер полосы уровня */
 .level-bar {
     width: 100%;
-    height: 8px;
+    height: 5px;
     margin-top: 4px;
     background-color: #eaeaeaea; /* Цвет фона полосы */
     border-radius: 10px;
