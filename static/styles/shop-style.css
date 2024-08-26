@@ -1,0 +1,16 @@
+.score {
+    display: flex;
+    position: absolute;
+    box-shadow: 0 0 10px #c2c2c22e;
+}
+
+.score span {
+    padding-top: 1px;
+    padding-left: 3px;
+    font-size: 32px;
+}
+
+.score img {
+    height: 40px;
+    width: 40px;
+}
