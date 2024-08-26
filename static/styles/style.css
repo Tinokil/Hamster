@@ -1,0 +1,157 @@
+/* Задний фон */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #02000c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Главный контейнер, содержащий монету, счёт и тд */
+.main-container {
+    text-align: center;
+    height: 100%;
+    background-color: #04001b;
+    color: #f1f1f1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    border: 2px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #6c6c6c99;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Отображение монеты */
+.coin {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.coin img {
+    width: 100%;
+}
+
+/* Анимация клика */
+.click-anim {
+    position: absolute;
+    pointer-events: none;
+    font-size: 30px;
+    color: #f1f1f1;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Энергия */
+.energy {
+    display: flex;
+    align-items: center;
+    background-color: #04001a;
+    width: 90px;
+    height: 50px;
+    border: 2px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #81818181;
+}
+
+.energy img {
+    height: 80%;
+}
+
+/* Профиль (фото и имя) */
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 5px;
+}
+
+.profile-photo {
+    display: flex;
+    align-items: center;
+    background-color: #04001a;
+    width: 45px;
+    height: 45px;
+    box-shadow: 0 0 2px #23232352;
+    overflow: hidden;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20%;
+}
+
+.profile-name {
+    margin-left: 10px;
+    font-size: 17px;
+    color: #f1f1f1;
+    font-weight: bold;
+}
+
+/* Кнопка настроек */
+.settings {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    margin: 70%;
+    background-image: url('../images/setting-icon.png');
+    background-size: cover;
+}
+
+/* Полоса уровня и название */
+.profile-level {
+    margin-top: 2px;
+    width: 130px;
+    text-align: center;
+}
+
+/* Контейнер полосы уровня */
+.level-bar {
+    width: 100%;
+    height: 8px;
+    margin-top: 4px;
+    background-color: #eaeaeaea; /* Цвет фона полосы */
+    border-radius: 10px;
+    box-shadow: 0 0 5px #0000004d;
+    overflow: hidden;
+}
+
+/* Прогресс уровня */
+.level-process {
+    height: 100%;
+    background: linear-gradient(90deg, #3daa27 0%, #d1e81d 50%, #d68100 75%, #610000 100%); /* Градиентный фон прогресса */
+    border-radius: 10px 0 0 10px;
+    transition: width 1s ease; /* Плавное изменение ширины при изменении уровня */
+}
+
+/* Выбор меню */
+.select-menu {
+    display: flex;
+    justify-content: space-between;
+    
+    width: 340px;
+    height: 100px;
+    margin-top: 30px;
+    border-top: 2px solid #c4c4c4;
+}
+
+.select-menu a {
+    color: #efefef;
+    text-decoration: none;
+}
+
+.menu-icon {
+    width: 70px;
+    height: 70px;
+}

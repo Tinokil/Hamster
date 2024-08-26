@@ -1,0 +1,296 @@
+/* Основные стили для тела страницы */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Основные стили для контейнера */
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #0000001a;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Заголовок */
+header h1 {
+    margin-bottom: 20px;
+}
+
+/* Переключатель тем */
+.theme-switcher {
+    margin-bottom: 20px;
+}
+
+.theme-switcher label {
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+.theme-switcher input[type="range"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100px;
+    height: 15px;
+    background: #ddd;
+    border-radius: 7px;
+    outline: none;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.theme-switcher input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.theme-switcher input[type="range"]::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.theme-switcher input[type="range"]::-ms-thumb {
+    width: 25px;
+    height: 25px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Монетка */
+.coin {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.2s;
+    width: 180px;
+    height: 180px;
+}
+
+.coin-background, .coin-icon {
+    width: 100%;
+    height: 100%;
+}
+
+.coin-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+}
+
+/* Анимация клика по монетке */
+.click-animation {
+    position: absolute;
+    pointer-events: none;
+    font-size: 30px;
+    color: #ff0000;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Тёмная тема */
+body.dark-theme {
+    background-color: #161616;
+    color: #ffffff;
+}
+
+.container.dark-theme {
+    background-color: #282828;
+}
+
+.menu.dark-theme {
+    background-color: #333;
+}
+
+.menu-item.dark-theme {
+    color: #ffffff;
+}
+
+/* Кнопки */
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+body.dark-theme button {
+    background-color: #1a73e8;
+}
+
+button.dark-theme:hover {
+    background-color: #0056b3;
+}
+
+/* Меню в футере */
+footer {
+    padding-top: 20px;
+    border-top: 1px solid #c5c5c5;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    background-color: transparent;
+}
+
+/* Элементы меню */
+.menu-item {
+    text-align: center;
+    flex: 1;
+    padding: 10px;
+    position: relative;
+}
+
+/* Контейнер иконок меню */
+.menu-icon-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Выделение активного меню */
+.menu-item.active {
+    border-bottom: 2px solid #007bff;
+    color: #007bff;
+}
+
+.menu-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.menu-item span {
+    display: block;
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+/* Статус энергии */
+.energy-status {
+    position: absolute;
+    bottom: 170px;
+    left: 410px;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.energy-status img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Тёмная тема для статуса энергии */
+body.dark-theme .energy-status {
+    background: #333;
+    color: #fff;
+}
+
+body.dark-theme .energy-status img {
+    filter: brightness(0.7);
+}
+
+/* Контейнер кнопок меню */
+.menu-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    background: transparent;
+}
+
+.menu-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: transparent;
+    color: #007bff;
+    margin: 0 10px;
+    transition: color 0.3s, border 0.3s, transform 0.2s;
+    border: 2px solid #007bff;
+}
+
+.menu-buttons button:hover {
+    color: #0056b3;
+    border-color: #0056b3;
+    transform: scale(1.05);
+}
+
+body.dark-theme .menu-buttons button {
+    border-color: #1a73e8;
+}
+
+body.dark-theme .menu-buttons button:hover {
+    color: #1a73e8;
+    border-color: #1a73e8;
+}
+
+/* Убираем стандартные стили ссылок и делаем их кликабельными */
+a {
+    text-decoration: none;
+    color: inherit; /* Убирает синий цвет и наследует цвет от родителя */
+    display: inline-block;
+    position: relative;
+}
+
+/* Добавляем возможность кликать на текст и изображения */
+a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 1;
+}
+
+a img {
+    position: relative;
+    z-index: 2;
+}
