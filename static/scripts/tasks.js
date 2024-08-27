@@ -5,13 +5,16 @@ const notification = document.createElement('div');
 notification.className = 'notification';
 document.body.appendChild(notification);
 
-// Функция для отображения уведомления на 5сек
+// Функция для отображения уведомления на 5 секунд
 function showNotification(message) {
     notification.textContent = message;
     notification.classList.add('show');
     setTimeout(() => {
-        notification.classList.remove('show');
-    }, 5000);
+        notification.classList.add('hide');
+        setTimeout(() => {
+            notification.classList.remove('show', 'hide');
+        }, 5000);
+    },5000);
 }
 
 // Функция для обработки клика на задачу
@@ -25,7 +28,7 @@ function handleTaskClick(event) {
 
     // Проверка, была ли задача уже выполнена
     if (localStorage.getItem(`task-completed-${taskId}`)) {
-        showNotification('Задание уже выполнено');
+        showNotification('❌Задание уже выполнено❌');
         return;
     }
 
@@ -35,8 +38,6 @@ function handleTaskClick(event) {
 
     // Помечаем задачу как выполненную
     localStorage.setItem(`task-completed-${taskId}`, 'true');
-
-    // Показываем уведомление
     showNotification('Задание выполнено!');
 
     // Перенаправление на указанную ссылку
@@ -48,4 +49,12 @@ function handleTaskClick(event) {
 // Привязка обработчика событий к каждому контейнеру задачи
 document.querySelectorAll('.task').forEach(task => {
     task.addEventListener('click', handleTaskClick);
+});
+
+// Скрытие уведомления по клику на него
+notification.addEventListener('click', () => {
+    notification.classList.add('hide');
+    setTimeout(() => {
+        notification.classList.remove('show', 'hide');
+    }, 50); // Время, соответствующее длительности анимации
 });
