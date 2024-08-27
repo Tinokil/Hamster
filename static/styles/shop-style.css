@@ -1,12 +1,11 @@
 .score {
     display: flex;
     position: absolute;
-    box-shadow: 0 0 10px #c2c2c22e;
 }
 
 .score span {
-    padding-top: 1px;
-    padding-left: 3px;
+    padding-top: 5px;
+    padding-left: 5px;
     font-size: 32px;
 }
 
@@ -16,14 +15,14 @@
 }
 
 .items {
-    margin-top: 50px;
+    margin-top: 55px;
     display: flex;
     gap: 8px; /* Расстояние между карточками */
     justify-content: center
 }
 
-/* Товар - +1000 энергии */
-.energy-update {
+/* Товар */
+.item {
     display: flex;
     flex-direction: column;
     width: 150px;
@@ -33,22 +32,16 @@
     overflow: hidden;
     position: relative;
     margin-bottom: 8px;
+    box-shadow: 2px 2px 0 #7e7e7ed8;
 }
 
-.energy-update img {
+.item img {
     width: 80px;
     height: 60px;
     object-fit: cover;
     background-color: #1b1b1c;
     border-bottom: 1px solid #898989;
     border-right: 1px solid #898989;
-}
-
-.item-info {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    height: 100%;
 }
 
 .item-name {
@@ -63,6 +56,13 @@
     padding-top: 1px;
     padding-bottom: 2px;
     border-bottom: 1px solid #898989;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100%;
 }
 
 .item-description {
