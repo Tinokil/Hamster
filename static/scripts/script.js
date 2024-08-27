@@ -6,12 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const energyElement = document.getElementById('energy-limit');
 
     let money = parseInt(localStorage.getItem('score')) || 0;
-    let energy = parseInt(localStorage.getItem('energy-limit')) || 1000;
+    let energy = parseInt(localStorage.getItem('energy')) || 1000;
+    let maxEnergy = parseInt(localStorage.getItem('energy-limit')) || 1000;
 
 
     scoreElement.textContent = money;
     energyElement.textContent = energy;
 
+    // Провека уровня
     function checkLevel() {
         if (money > 5000000000) {
             levelBar.style.width = '100%';
@@ -34,13 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (money > 500000) {
             levelBar.style.width = '40%';
             levelName.textContent = 'LEGEND';
-        } else if (money > 100000) {
+        } else if (money > 120000) {
             levelBar.style.width = '30%';
             levelName.textContent = 'MASTER';
-        } else if (money > 50000) {
+        } else if (money > 60000) {
             levelBar.style.width = '20%';
             levelName.textContent = 'EXPERT';
-        } else if (money > 10000) {
+        } else if (money > 20000) {
             levelBar.style.width = '10%';
             levelName.textContent = 'ADVANCED';
         } else {
@@ -50,26 +52,54 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     checkLevel();
 
-    // Обновление энергии раз в 1.4 секунды
-    function updateEnergy() {
-        energy += 2;
-        energyElement.textContent = energy;
-        localStorage.setItem('energy-limit', energy);
+    function updateEnergyIcon() {
+        energyPicture = document.getElementById('energy-image');
+        if (energy <= 0) {
+            energyPicture.src = 'http://127.0.0.1:5500/static/images/bulb/light%20bulb%200.png';
+        } else if (energy < maxEnergy * 0.25) {
+            energyPicture.src = 'http://127.0.0.1:5500/static/images/bulb/light%20bulb%201.png';
+        } else if (energy < maxEnergy * 0.5) {
+            energyPicture.src = 'http://127.0.0.1:5500/static/images/bulb/light%20bulb%202.png';
+        } else if (energy < maxEnergy * 0.75) {
+            energyPicture.src = 'http://127.0.0.1:5500/static/images/bulb/light%20bulb%203.png';
+        } else if (energy < maxEnergy) {
+            energyPicture.src = 'http://127.0.0.1:5500/static/images/bulb/light%20bulb%204.png';
+        } else {
+            energyPicture.src = 'http://127.0.0.1:5500/static/images/bulb/light%20bulb%205.png';
+        };
     }
 
-    setInterval(updateEnergy, 1400);
+    // Обновление энергии раз в 1,7 секунды
+    function updateEnergy() {
+        if (energy + 2 <= maxEnergy) {
+            energy += 2;
+        } else if (energy + 1 <= maxEnergy) {
+            energy += 1;
+        }
+        energyElement.textContent = energy;
+        localStorage.setItem('energy', energy);
+        updateEnergyIcon()
+    }
 
+    setInterval(updateEnergy, 1700);
+
+    // Действия при клике на монету
     coin.addEventListener('click', (event) => {
         // Увеличение счета
         if (energy > 0) {
             money++;
             energy--;
         };
+
+        updateEnergyIcon()
+
         scoreElement.textContent = money;
         energyElement.textContent = energy;
+
         checkLevel()
+        // Сохранение данных
         localStorage.setItem('score', money);
-        localStorage.setItem('energy-limit', energy);
+        localStorage.setItem('energy', energy);
 
         // Уменьшение монетки при клике
         coin.style.transform = 'scale(0.9)';
