@@ -47,7 +47,6 @@ function delPurchItems() {
 document.addEventListener('DOMContentLoaded', () => {
     const scoreElement = document.getElementById('score');
 
-
     scoreElement.textContent = money;
 
     document.getElementById('add-energy-lvl').textContent = `${localStorage.getItem('add-energy-lvl') || '0'} LVL`;

@@ -1,0 +1,100 @@
+/* Кол-во друзей и прибыль с них */
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+/* Кол-во друзей */
+.friends-count {
+    margin-top: 10px;
+    width: 80px;
+    height: 40px;
+    background-color: #2e2e2ed2;
+    border: 1px solid #c0000075;
+    border-radius: 13px;
+    align-content: center;
+}
+
+.friends-count p {
+    font-size: 9px;
+    color: #eaeaeaa4;
+    margin: 0;
+}
+
+/* Деньги */
+.money {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 180px;
+    height: 40px;
+    background-color: #2e2e2ed2;
+    border: 1px solid #c0000075;
+    border-radius: 13px;
+}
+
+.money img, .friends-income img {
+    height: 65%;
+    padding-right: 3px;
+}
+
+/* Заработок с друзей */
+.friends-income {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100px;
+    height: 40px;
+    background-color: #2e2e2ed2;
+    border: 1px solid #c0000075;
+    border-radius: 13px;
+}
+
+.block-con {
+    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Стили для текста над контейнером */
+.referral-text {
+    font-size: 16px;
+    color: #080808;
+}
+
+/* Контейнер для реферальной ссылки */
+.refferal {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 320px;
+    height: 50px;
+    border: 1px solid #000000cf;
+    border-radius: 15px;
+    background-color: #ffffffbb;
+    color: #080808;
+    box-sizing: border-box;
+}
+
+/* Стили для кнопки внутри контейнера */
+.refferal button {
+    height: 100%;
+    border: none;
+    background-color: #0052a9bb;
+    color: #ffffff;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* Стили для текста внутри контейнера */
+.refferal #refferal-url {
+    flex: 1;
+    font-size: 14px;
+    text-align: center;
+    white-space: nowrap;
+}

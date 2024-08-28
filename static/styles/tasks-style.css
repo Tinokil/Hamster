@@ -75,20 +75,30 @@ header {
     position: fixed;
     bottom: 20px;
     left: 50%;
-    transform: translateX(-50%);
-    background-color: #000000e3;
-    color: #ffffffe3;
-    padding-top: 17px;
-    padding-bottom: 17px;
-    border-radius: 20px;
-    box-shadow: 0 0 12px #10101066;
+    transform: translateX(-50%) translateY(30px);
+    background: linear-gradient(135deg, #22223fb0 0%, #2e2e4eb0 25%, #353563b0 50%, #444480b0 75%, #39397db0 100%);
+
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px #0000004d;
     opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    z-index: 1000;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    padding: 15px 25px;
+    max-width: 300px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
     cursor: pointer;
 }
 
 /* Показ уведомления */
 .notification.show {
     opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Анимация исчезновения уведомления */
+.notification.hide {
+    opacity: 0;
+    transform: translateX(-50%) translateY(30px);
 }
