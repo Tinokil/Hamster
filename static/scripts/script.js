@@ -55,17 +55,17 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateEnergyIcon() {
         energyPicture = document.getElementById('energy-image');
         if (energy <= 0) {
-            energyPicture.src = 'http://127.0.0.1:5500/static/images/bulb/light%20bulb%200.png';
+            energyPicture.src = 'https://github.com/Tinokil/Hamster/blob/main/static/images/bulb/light%20bulb%200.png?raw=true';
         } else if (energy < maxEnergy * 0.25) {
-            energyPicture.src = 'http://127.0.0.1:5500/static/images/bulb/light%20bulb%201.png';
+            energyPicture.src = 'https://github.com/Tinokil/Hamster/blob/main/static/images/bulb/light%20bulb%201.png?raw=true';
         } else if (energy < maxEnergy * 0.5) {
-            energyPicture.src = 'http://127.0.0.1:5500/static/images/bulb/light%20bulb%202.png';
+            energyPicture.src = 'https://github.com/Tinokil/Hamster/blob/main/static/images/bulb/light%20bulb%202.png?raw=true';
         } else if (energy < maxEnergy * 0.75) {
-            energyPicture.src = 'http://127.0.0.1:5500/static/images/bulb/light%20bulb%203.png';
+            energyPicture.src = 'https://github.com/Tinokil/Hamster/blob/main/static/images/bulb/light%20bulb%203.png?raw=true';
         } else if (energy < maxEnergy) {
-            energyPicture.src = 'http://127.0.0.1:5500/static/images/bulb/light%20bulb%204.png';
+            energyPicture.src = 'https://github.com/Tinokil/Hamster/blob/main/static/images/bulb/light%20bulb%204.png?raw=true';
         } else {
-            energyPicture.src = 'http://127.0.0.1:5500/static/images/bulb/light%20bulb%205.png';
+            energyPicture.src = 'https://github.com/Tinokil/Hamster/blob/main/static/images/bulb/light%20bulb%205.png?raw=true';
         };
     }
 

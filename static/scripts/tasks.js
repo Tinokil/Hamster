@@ -13,7 +13,7 @@ function showNotification(message) {
         notification.classList.add('hide');
         setTimeout(() => {
             notification.classList.remove('show', 'hide');
-        }, 5000);
+        }, 500); // Время скрытия
     },5000);
 }
 
@@ -56,5 +56,5 @@ notification.addEventListener('click', () => {
     notification.classList.add('hide');
     setTimeout(() => {
         notification.classList.remove('show', 'hide');
-    }, 50); // Время, соответствующее длительности анимации
+    }, 300); // Время скрытия
 });

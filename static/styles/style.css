@@ -20,7 +20,7 @@ body {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    box-shadow: 0 0 15px #85858590;
+    box-shadow: 0 0 15px 2px #85858590;
     justify-content: space-between;
     position: relative;
 }
@@ -46,20 +46,61 @@ body {
     margin-top: 25px;
 }
 
+.dashboard-metrics {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
 /* Энергия */
 .energy {
     display: flex;
     margin-top: 10px;
     align-items: center;
-    background-color: #343434;
-    width: 90px;
+    background-color: #424242c9;
+    width: 100px;
     height: 45px;
-    border-radius: 10px;
-    box-shadow: 1.4px 1.4px 0 #5a5a5ac2;
+    border-radius: 12px;
+    box-shadow: 1.6px 1.6px 0 #5a5a5ac2;
 }
 
 .energy img {
+    height: 75%;
+}
+
+/* Доход */
+.income {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    align-items: center;
+    background-color: #424242c9;
+    width: 120px;
+    height: 45px;
+    border-radius: 12px;
+    box-shadow: 1.4px 1.4px 0 #5a5a5ac2;
+    position: relative;
+}
+
+.income p {
+    font-size: 8.2px;
+    color: #a7a7a78c;
+    margin: 0;
+    margin-top: 1.2px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    height: 30px;
+    width: 120px;
+}
+
+.content img {
     height: 80%;
+    margin-right: 3px;
 }
 
 /* Профиль (фото и имя) */
@@ -138,7 +179,7 @@ body {
     width: 340px;
     height: 100px;
     margin-top: 30px;
-    border-top: 2px solid #c4c4c4;
+    border-top: 1.5px solid #bababab5;
 }
 
 .select-menu a {
@@ -151,6 +192,7 @@ body {
     height: 70px;
 }
 
+/* Полоса текущей страницы */
 .strip-page {
     position: relative;
     padding-bottom: 7px;
@@ -162,8 +204,8 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 4px; /* Высота полосы */
-    background: #ba0000; /* Цвет полосы */
-    border-radius: 10px; /* Закругленные углы только снизу */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Тень для эффекта */
+    height: 4px;
+    background: #ba0000;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px #00000033;
 }

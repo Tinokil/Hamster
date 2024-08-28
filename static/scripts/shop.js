@@ -49,10 +49,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     scoreElement.textContent = money;
-    
+
     document.getElementById('add-energy-lvl').textContent = `${localStorage.getItem('add-energy-lvl') || '0'} LVL`;
     document.getElementById('autoclicker-lvl').textContent = `${localStorage.getItem('autoclicker-lvl') || '0'} LVL`;
     document.getElementById('click-power-lvl').textContent = `${localStorage.getItem('click-power-lvl') || '0'} LVL`;
+
+    document.getElementById('add-energy-price').textContent = 4000 * 2 ** parseInt(localStorage.getItem('add-energy-lvl')) || 4000;
+    document.getElementById('autoclicker-price').textContent = 7000 * 2 ** parseInt(localStorage.getItem('autoclicker-lvl')) || 7000;
+    document.getElementById('click-power-price').textContent = 10000 * 2 ** parseInt(localStorage.getItem('click-power-lvl')) || 10000;
 
     // Функция для покупки предмета
     function buyItem(itemId) {
@@ -63,13 +67,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (money >= itemPriceElement) {
             money -= itemPriceElement;
             if (itemId == 'add-energy') {
-                localStorage.setItem('energy-limit', (itemLvl + 1) * 1000)
+                localStorage.setItem('energy-limit', (itemLvl + 2) * 1000)
                 console.log(localStorage)
             }
             itemLvl++;
             scoreElement.textContent = money;
             itemLvlElement.textContent = `${itemLvl} LVL`;
-            document.getElementById(`${itemId}-price`).textContent = itemPriceElement * 3
+            document.getElementById(`${itemId}-price`).textContent = itemPriceElement * 2
             localStorage.setItem('score', money);
             localStorage.setItem(`${itemId}-lvl`, itemLvl);
         }
